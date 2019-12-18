@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="../bootstrap/css/font-awesome-5.6.3.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap/css/mdb.css">
+    <link rel="stylesheet" href="../bootstrap/css/style.css">
+    <style>
+        .t_card , .t_card .card-body{
+
+            box-shadow: 0 0 10px black;
+            padding: 30px;
+
+
+
+        }
+        .col-md-4
+        {
+            padding: 15px;
+        }
+        header {
+            background: linear-gradient(45deg, black, blueviolet);
+            color: white;
+            padding: 12px;
+            box-shadow: 0 0 10px black;
+        }
+
+
+
+    </style>
+    <title>JS Digital Watches</title>
+</head>
+
+
+<body>
+<header>
+<h1 class="display-4" id="h1" style="alignment: center">TimeZone</h1>
+</header>
+
+
+<div class="container-fluid mt-5" >
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card t_card">
+                <div class="card-body bg-teal text-white text-center">
+                    <h5>Asia/Kolkata</h5>
+                    <h4 class="display-4" style="font-size: 30px">India</h4>
+                    <p id="indian-date"></p>
+                    <h4 class="display-4" id="indian-time"></h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card t_card">
+                <div class="card-body bg-warning text-white text-center">
+                    <h5>America/New_York</h5>
+                    <h4 class="display-4" style="font-size: 30px">USA</h4>
+                    <p id="usa-date"></p>
+                    <h4 class="display-4" id="usa-time"></h4>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card t_card">
+                    <div class="card-body bg-primary text-white text-center">
+                    <h5>Asia/Shanghai</h5>
+                    <h4 class="display-4" style="font-size: 30px">China</h4>
+                    <p id="china-date"></p>
+                    <h4 class="display-4" id="china-time"></h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card t_card">
+                <div class="card-body bg-info text-white text-center">
+                    <h5>Canada</h5>
+                    <h4 class="display-4" style="font-size: 30px">Canada</h4>
+                    <p id="canada-date"></p>
+                    <h4 class="display-4" id="canada-time"></h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card t_card">
+                <div class="card-body bg-dark text-white text-center">
+                    <h5>Asia/Pak</h5>
+                    <h4 class="display-4" style="font-size: 30px">Pakistan</h4>
+                    <p id="pakistan-date"></p>
+                    <h4 class="display-4" id="pakistan-time"></h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card t_card">
+                <div class="card-body bg-secondary text-white text-center">
+                    <h5>Brazil</h5>
+                    <h4 class="display-4" style="font-size: 30px">Brazil</h4>
+                    <p id="brazil-date"></p>
+                    <h4 class="display-4" id="brazil-time"></h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card t_card">
+                <div class="card-body bg-light text-white text-center">
+                    <h5>Asia/Srilanka</h5>
+                    <h4 class="display-4" style="font-size: 30px">SriLanka</h4>
+                    <p id="sri-date"></p>
+                    <h4 class="display-4" id="sri-time"></h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card t_card">
+                <div class="card-body bg-danger text-white text-center">
+                    <h5>South</h5>
+                    <h4 class="display-4" style="font-size: 30px">Africa</h4>
+                    <p id="africa-date"></p>
+                    <h4 class="display-4" id="africa-time"></h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card t_card">
+                <div class="card-body bg-warning text-white text-center">
+                    <h5>Australia</h5>
+                    <h4 class="display-4" style="font-size: 30px">Australia</h4>
+                    <p id="aus-date"></p>
+                    <h4 class="display-4" id="aus-time"></h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card t_card">
+                <div class="card-body bg-success text-white text-center">
+                    <h5>South</h5>
+                    <h4 class="display-4" style="font-size: 30px">England</h4>
+                    <p id="england-date"></p>
+                    <h4 class="display-4" id="england-time"></h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card t_card">
+                <div class="card-body bg-default text-white text-center">
+                    <h5>West</h5>
+                    <h4 class="display-4" style="font-size: 30px">WestIndies</h4>
+                    <p id="west-date"></p>
+                    <h4 class="display-4" id="west-time"></h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card t_card">
+                <div class="card-body bg-primary text-white text-center">
+                    <h5>Asia/Bangladesh</h5>
+                    <h4 class="display-4" style="font-size: 30px">Bangladesh</h4>
+                    <p id="bangladesh-date"></p>
+                    <h4 class="display-4" id="bangladesh-time"></h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card t_card">
+                <div class="card-body bg-teal text-white text-center">
+                    <h5>Asia/Nepl</h5>
+                    <h4 class="display-4" style="font-size: 30px">Nepal</h4>
+                    <p id="nepal-date"></p>
+                    <h4 class="display-4" id="nepal-time"></h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card t_card">
+                <div class="card-body bg-info text-white text-center">
+                    <h5>West</h5>
+                    <h4 class="display-4" style="font-size: 30px">Portugal</h4>
+                    <p id="portugal-date"></p>
+                    <h4 class="display-4" id="portugal-time"></h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card t_card">
+                <div class="card-body bg-success text-white text-center">
+                    <h5>NewZealand</h5>
+                    <h4 class="display-4" style="font-size: 30px">NewZealand</h4>
+                    <p id="new-date"></p>
+                    <h4 class="display-4" id="new-time"></h4>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+</body>
+<!-- Body Ends -->
+<script src="../bootstrap/js/jquery-3.3.1.min.js" ></script>
+<script src="../bootstrap/js/popper.min.js" ></script>
+<script src="../bootstrap/js/bootstrap.min.js" ></script>
+<script src="../bootstrap/js/mdb.min.js" ></script>
+<script src="28_script.js" ></script>
+</html>
